@@ -1,10 +1,13 @@
-*{margin: 0;
-padding: 0;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .Wyniki {
     display: flex;
-    gap: 30px;
+    gap: 5px;
     justify-content: center;
-    
     /* background-color: red; */
 
 }
@@ -71,8 +74,6 @@ background-color: rgb(85, 85, 141);
    background-image:url(https://www.exim.pl/getmedia/f1874de1-830e-4fc2-9945-5e719732f2bb/Plaze-Albania.jpg?maxsidesize=1200&resizemode=force);
     background-size: cover;
    background-repeat: no-repeat;
-   border-radius: 20px;
-
    padding: 30px;
 }
 
@@ -87,13 +88,14 @@ background-color: rgb(85, 85, 141);
 
 .tekst {
     color: white;
-    background-color: rgb(55, 55, 61);
+    background-color: rgb(52, 52, 62);
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
     opacity: 0.6;
     max-width: 350px;
     margin: 0 auto;
     padding:10px 30px;
+    /* background-color: red; */
 
 }    
 
