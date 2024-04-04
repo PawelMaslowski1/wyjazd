@@ -1,0 +1,49 @@
+.Wyniki {
+    display: flex;
+    gap: 30px;
+}
+
+.Box {
+    color: white;
+    background-color: blue;
+    padding: 30px;
+    border-radius: 20px;
+
+}
+
+.Box:hover {
+background-color: rgb(85, 85, 141);
+}
+
+.Dane {
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+}
+
+.dane1 {
+    border-radius: 15px;
+    color: rgb(33, 19, 111);
+    background-color: rgb(23, 205, 205);
+    padding: 15px;
+}
+
+.przycisk {
+    border-radius: 15px;
+    color: rgb(41, 204, 128);
+    background-color: rgb(19, 21, 20);
+    padding: 15px;
+}
+
+.Miasto {
+    /* background-color: gold; */
+ 
+    text-align: center;
+}
+
+.kulka {
+    border-radius: 50px;
+    height: 70px;
+    width: 70px;
+    
+}
