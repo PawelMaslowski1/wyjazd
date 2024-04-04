@@ -124,7 +124,7 @@ function odliczanieDoWyjazdu () {
   
   console.log(sekundy);
   
-  odliczanie.textContent = `${dni} dni, ${godziny}:${minuty};${sekundy}`
+  odliczanie.textContent = `${dni} dni ${godziny} godziny ${minuty} minut ${sekundy} sekund`
 
 }
 

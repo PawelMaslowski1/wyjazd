@@ -1,13 +1,25 @@
+*{margin: 0;
+padding: 0;}
 .Wyniki {
     display: flex;
     gap: 30px;
+    justify-content: center;
+    
+    /* background-color: red; */
+
 }
+
+@media (max-width:768px) {
+
+    .Wyniki {
+     flex-direction:column
+  }
+  }
 
 .Box {
     color: white;
-    background-color: blue;
-    padding: 30px;
-    border-radius: 20px;
+    background-color: rgb(55, 55, 61);
+    border-radius: 8px;
 
 }
 
@@ -38,8 +50,9 @@ background-color: rgb(85, 85, 141);
 
 .Miasto {
     /* background-color: gold; */
- 
     text-align: center;
+    display: none;
+    
 }
 
 .kulka {
@@ -52,4 +65,38 @@ background-color: rgb(85, 85, 141);
 
 .zegarek {
     display: none;
+}
+
+.karta {
+   background-image:url(https://www.exim.pl/getmedia/f1874de1-830e-4fc2-9945-5e719732f2bb/Plaze-Albania.jpg?maxsidesize=1200&resizemode=force);
+    background-size: cover;
+   background-repeat: no-repeat;
+   border-radius: 20px;
+
+   padding: 30px;
+}
+
+.box2 {
+    text-align: center;
+    
+}
+
+.czas {
+    text-align: center;    
+}
+
+.tekst {
+    color: white;
+    background-color: rgb(55, 55, 61);
+    padding: 5px;
+    border-radius: 15px;
+    opacity: 0.6;
+    max-width: 350px;
+    margin: 0 auto;
+    padding:10px 30px;
+
+}    
+
+.licznik {
+    padding: 15px;
 }
