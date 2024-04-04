@@ -27,6 +27,7 @@ const zegarGodzina = document.getElementById("zegar1");
 const zegarMinuta = document.getElementById("zegar2");
 const zegarSekunda = document.getElementById("zegar3");
 const loader = document.getElementById("Loader");
+const odliczanie = document.getElementById("odliczanie");
 
 // function pokazWspolrzedne () {
 //     console.log("lat:" + latInput.value);
@@ -55,9 +56,7 @@ async function danePogodowe() {
     const dane = await odpowiedz.json();
 
     pobierzMiasto.textContent = dane.name;
-    console.log(dane);
-    console.log(dane.main.temp);
-    console.log(dane.wind.speed);
+    
 
     pobierzTemperatura.textContent =
       "Temperatura: " + konwertujStopnie(dane.main.temp);
@@ -87,7 +86,7 @@ function wybierzKolor(temp) {
     Kulka.style.backgroundColor = "blue";
   }
 }
-
+danePogodowe()
 pobierzBtn.addEventListener("click", danePogodowe);
 
 function zegar() {
@@ -103,9 +102,32 @@ function zegar() {
   zegarSekunda.textContent = sekundy >= 10 ? sekundy : "0" + sekundy;
 
   const zegar = `${godziny}:${minuty}:${sekundy}`;
-  console.log(zegar);
+  // console.log(zegar);
 }
 zegar();
 setInterval(function czas() {
   zegar();
 }, 1000);
+
+
+function odliczanieDoWyjazdu () {
+  const czasWyjazdu = new Date("April 9, 2024 22:30:00").getTime();
+
+  const obecnyCzas = new Date().getTime();
+  
+  
+  const licznik = czasWyjazdu - obecnyCzas;
+  const dni = Math.floor(licznik / (1000 * 60 * 60 * 24));
+  const godziny = Math.floor((licznik % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) );
+  const minuty = Math.floor((licznik & (1000 * 60 * 60)) / (1000 * 60));
+  const sekundy = Math.floor((licznik % (1000 * 60)) / 1000);
+  
+  console.log(sekundy);
+  
+  odliczanie.textContent = `${dni} dni, ${godziny}:${minuty};${sekundy}`
+
+}
+
+odliczanieDoWyjazdu()
+
+setInterval(odliczanieDoWyjazdu, 1000);

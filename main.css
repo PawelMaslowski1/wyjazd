@@ -16,9 +16,10 @@ background-color: rgb(85, 85, 141);
 }
 
 .Dane {
-    display: flex;
+    display: none;
     flex-direction:column;
     gap: 15px;
+    
 }
 
 .dane1 {
@@ -45,5 +46,10 @@ background-color: rgb(85, 85, 141);
     border-radius: 50px;
     height: 70px;
     width: 70px;
+    display: none;
     
+}
+
+.zegarek {
+    display: none;
 }
